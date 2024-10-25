@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Localidade</title>
+</head>
+<body>
+    <h1>Região de Moradia</h1>
+    <p>Diga abaixo de qual país você veio</p>
+    <input type="txtRegiao" id="txtRegiao">
+    <input type="button" value="Verificar" onclick="Clicar()">
+    <Div id="res">
+
+    </Div>
+    <script>
+        function Clicar(){
+            var Regiao = document.getElementById('txtRegiao')
+            var Res = document.getElementById('res')
+            var Pais = Regiao.value
+            if (Pais == 'Brasil'){
+                Res.innerHTML = `<p>Então você é daqui do <strong>${Pais}</strong>!</p>`
+                Res.innerHTML += `<p>Bom, a estadia mais barata que possuimos sai em torno de R$950,00</p>`
+            } else {
+                Res.innerHTML = `<p>Eu adoro este país! <strong>${Pais}</strong> é um lugar lindo!</p>`
+                Res.innerHTML += `<p>Bom, a estadia mais barata que possuimos sai em torno de R$1320,00</p>`
+            }
+        }
+    </script>
+</body>
+</html>
